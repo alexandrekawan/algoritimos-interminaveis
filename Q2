@@ -1,0 +1,25 @@
+programa {
+	funcao inicio() {
+		inteiro contador = 1
+		real menor_altura = 0.0, maior_altura = 0.0, temporario = 0.0
+		
+		enquanto (contador <= 15) {
+		    escreva("Digite a idade da pessoa ", contador, ": ")
+		    leia(temporario)
+		    
+		    se (contador == 1) {
+		        maior_altura = temporario
+		        menor_altura = temporario
+		    } senao se (temporario > maior_altura) {
+		        maior_altura = temporario
+		    } senao se (temporario < menor_altura) {
+		        menor_altura = temporario
+		    }
+		    
+		    contador = contador + 1
+		}
+		
+		escreva("A menor altura foi: ", menor_altura, "\n")
+		escreva("A maior altura foi: ", maior_altura, "\n")
+	}
+}
