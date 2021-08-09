@@ -1,0 +1,15 @@
+programa
+{
+	funcao inicio ()
+	{
+	    inteiro contador = 100
+
+	    enquanto (contador <= 200) {
+	        se (contador % 2 == 1) {
+	            escreva("Yielding ", contador, "\n")
+		    }
+		    
+		    contador = contador + 1
+	    }
+	}
+}
