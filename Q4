@@ -1,0 +1,33 @@
+programa {
+	funcao inicio() {
+		inteiro contador = 1, total_intervalo_1 = 0, total_intervalo_2 = 0, total_intervalo_3 = 0, total_intervalo_4 = 0, temporario = 0
+		logico deve_continuar_lendo = verdadeiro
+		
+		enquanto (deve_continuar_lendo) {
+		    escreva("Digite a ", contador, "° entrada: ")
+		    leia(temporario)
+		    
+		    se (temporario < 0) {
+		        deve_continuar_lendo = falso
+		    } senao se (temporario >= 0 e temporario <= 25) {
+		        total_intervalo_1 = total_intervalo_1 + 1
+		    } senao se (temporario >= 26 e temporario <= 50) {
+		        total_intervalo_2 = total_intervalo_2 + 1
+		    } senao se (temporario >= 51 e temporario <= 75) {
+		        total_intervalo_3 = total_intervalo_3 + 1
+		    } senao se (temporario >= 76 e temporario <= 100) {
+		        total_intervalo_4 = total_intervalo_4 + 1
+		    }
+		    
+		    contador = contador + 1
+		}
+		
+		escreva("\n")
+		
+		escreva("Total no intervalo [0 - 25]: ", total_intervalo_1, "\n")
+		escreva("Total no intervalo [26 - 50]: ", total_intervalo_2, "\n")
+		escreva("Total no intervalo [51 - 75]: ", total_intervalo_3, "\n")
+		escreva("Total no intervalo [76 - 100]: ", total_intervalo_4, "\n")
+		
+	}
+}
