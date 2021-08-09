@@ -1,0 +1,19 @@
+programa
+{
+	funcao inicio ()
+	{
+		inteiro numero = 1, soma = 0
+		
+		enquanto (numero<=500) {
+		 
+    		 se (numero %3==0 e numero %2==1) {
+    		    soma = soma + numero 
+    		 }
+    		
+		    numero = numero + 1
+		}
+		
+		escreva("Soma dos múltiplos de 3. [1-500] = ", soma) 
+		
+	}
+}
