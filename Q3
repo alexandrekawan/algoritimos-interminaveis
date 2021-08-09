@@ -1,0 +1,34 @@
+programa {
+	funcao inicio() {
+		inteiro numero_de_entradas = 0, contador = 0, numero_de_negativos = 0, numero_de_positivos = 0
+		real temporario = 0.0, soma = 0.0
+		
+		escreva("Digite o número de entradas: ")
+		leia(numero_de_entradas)
+	
+	    enquanto (contador < numero_de_entradas) {
+	        escreva("Digite um número: ")
+	        leia(temporario)
+	        
+	        soma = soma + temporario
+	        
+	        se (temporario > 0) {
+	            numero_de_positivos = numero_de_positivos + 1
+	        } senao se (temporario < 0) {
+	            numero_de_negativos = numero_de_negativos + 1
+	        }
+	        
+	        
+	        
+	        contador = contador + 1
+	    }
+	    
+	    escreva("A media aritimética das entradas foi: ", soma/numero_de_entradas, "\n")
+	    
+	    escreva("O número de entradas positivas foi: ", numero_de_positivos, "\n")
+	    escreva("O número de entradas negativas foi: ", numero_de_negativos, "\n")
+	  
+	    escreva("A porcentagem de números positivos foi: ", (100/numero_de_entradas) * numero_de_positivos, "%\n")
+	    escreva("A porcentagem de números negativos foi: ", (100/numero_de_entradas) * numero_de_negativos, "%\n")
+	}
+}
