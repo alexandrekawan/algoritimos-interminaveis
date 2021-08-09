@@ -1,0 +1,20 @@
+programa
+{
+	funcao inicio ()
+	{
+	    inteiro A, fat=1, tmp
+	
+	
+		escreva("Digite o valor inicial:")
+		leia(A)
+	  
+	    tmp = A
+	  
+	    enquanto (tmp > 0) {
+	 	    fat = fat * tmp
+	        tmp = tmp - 1
+	    }
+	    
+		escreva (A, "! = ", fat, "\n")
+	}
+}
