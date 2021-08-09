@@ -1,0 +1,36 @@
+programa
+{
+	funcao inicio ()
+	{
+	    inteiro temporario = 0, numero_pares = 0, numero_impares = 0
+	    real media_pares = 0.0, media_geral = 0.0, soma_geral = 0, soma_pares = 0
+	    logico deve_continuar_lendo = verdadeiro
+	    
+	    enquanto (deve_continuar_lendo) {
+	        escreva("Digite um número: ")
+	        leia(temporario)
+	      
+	        se (temporario == 0) {
+	            deve_continuar_lendo = falso
+	            // Tá, zero é divisível por dois. Se eu somar ele com 2 eu obtenho um número par
+	            // Ele cumpre as expectativas de um número par
+	            // Mas eu n vou adicionar ele ao resto dos pares pois ele é quem indica o fim das entradas
+	        } senao se (temporario % 2 == 0) {
+	            soma_pares = soma_pares + temporario
+	            numero_pares = numero_pares + 1
+	        } senao {
+	            numero_impares = numero_impares + 1
+	        }
+	        
+	        soma_geral = soma_geral + temporario
+	    }
+	    
+	    media_pares = soma_pares / numero_pares
+	    media_geral = soma_geral / (numero_pares + numero_impares)
+	    
+	    escreva("Número de valores pares: ", numero_pares, "\n")
+	    escreva("Número de valores ímpares: ", numero_impares, "\n")
+	    escreva("Média de pares: ", media_pares, "\n")
+	    escreva("Média geral: ", media_geral, "\n")
+	}
+}
